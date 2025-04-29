@@ -1,0 +1,146 @@
+// Sample embedding data for visualization
+// In a real application, these would be actual embeddings from an ML model
+
+export interface TextItem {
+    id: string;
+    title: string;
+    author: string;
+    year: number;
+    type: "novel" | "article" | "poem" | "short story";
+    genre: string;
+    description: string;
+    // This would normally be a much higher-dimensional vector
+    // But for visualization purposes, we'll use small vectors
+    embedding: number[];
+  }
+  
+  export const sampleData: TextItem[] = [
+    {
+      id: "1",
+      title: "Pride and Prejudice",
+      author: "Jane Austen",
+      year: 1813,
+      type: "novel",
+      genre: "Romance",
+      description: "A romantic novel of manners that follows the character development of Elizabeth Bennet.",
+      embedding: [0.2, 0.8, 0.1, 0.9, 0.3, 0.7, 0.4]
+    },
+    {
+      id: "2",
+      title: "1984",
+      author: "George Orwell",
+      year: 1949,
+      type: "novel",
+      genre: "Dystopian",
+      description: "A dystopian novel set in a totalitarian society under the control of a privileged elite.",
+      embedding: [-0.7, -0.2, 0.5, 0.3, -0.8, 0.1, 0.2]
+    },
+    {
+      id: "3",
+      title: "To Kill a Mockingbird",
+      author: "Harper Lee",
+      year: 1960,
+      type: "novel",
+      genre: "Coming-of-age",
+      description: "A novel examining racism and injustice in the American South during the 1930s.",
+      embedding: [0.5, 0.6, -0.2, -0.1, 0.7, 0.3, -0.4]
+    },
+    {
+      id: "4",
+      title: "The Great Gatsby",
+      author: "F. Scott Fitzgerald",
+      year: 1925,
+      type: "novel",
+      genre: "Tragedy",
+      description: "A novel of the Jazz Age that follows the rise and fall of Jay Gatsby.",
+      embedding: [0.3, 0.5, 0.7, -0.2, -0.3, -0.1, 0.6]
+    },
+    {
+      id: "5",
+      title: "The Waste Land",
+      author: "T.S. Eliot",
+      year: 1922,
+      type: "poem",
+      genre: "Modernist",
+      description: "A long poem considered to be one of the most important poems of the 20th century.",
+      embedding: [-0.5, 0.3, -0.7, -0.2, 0.4, -0.6, -0.1]
+    },
+    {
+      id: "6",
+      title: "Why I Write",
+      author: "George Orwell",
+      year: 1946,
+      type: "article",
+      genre: "Essay",
+      description: "An essay explaining Orwell's motivations for writing and his development as a writer.",
+      embedding: [-0.6, -0.3, 0.4, 0.5, -0.7, 0.2, 0.1]
+    },
+    {
+      id: "7",
+      title: "The Yellow Wallpaper",
+      author: "Charlotte Perkins Gilman",
+      year: 1892,
+      type: "short story",
+      genre: "Gothic",
+      description: "A short story depicting a woman's mental health decline after being confined to rest.",
+      embedding: [0.1, -0.5, -0.6, 0.4, 0.2, -0.3, -0.8]
+    },
+    {
+      id: "8",
+      title: "Hamlet",
+      author: "William Shakespeare",
+      year: 1603,
+      type: "novel",
+      genre: "Tragedy",
+      description: "A tragedy of revenge, exploring themes of treachery, revenge, and moral corruption.",
+      embedding: [0.8, 0.2, -0.3, -0.5, 0.1, 0.9, 0.4]
+    },
+    {
+      id: "9",
+      title: "On Liberty",
+      author: "John Stuart Mill",
+      year: 1859,
+      type: "article",
+      genre: "Philosophy",
+      description: "A philosophical work addressing the limits of power that can be exercised by society over an individual.",
+      embedding: [-0.4, 0.9, 0.1, -0.3, 0.5, -0.2, 0.7]
+    },
+    {
+      id: "10",
+      title: "The Road Not Taken",
+      author: "Robert Frost",
+      year: 1916,
+      type: "poem",
+      genre: "Poetry",
+      description: "A narrative poem about a decision the speaker made at a crossroads in their life.",
+      embedding: [0.6, -0.4, 0.2, 0.8, -0.1, 0.5, -0.3]
+    },
+    {
+      id: "11",
+      title: "The Metamorphosis",
+      author: "Franz Kafka",
+      year: 1915,
+      type: "short story",
+      genre: "Absurdist",
+      description: "A novella about a man who wakes up one morning to find himself transformed into an insect.",
+      embedding: [-0.2, -0.6, -0.8, 0.1, -0.4, -0.5, -0.9]
+    },
+    {
+      id: "12",
+      title: "The Origin of Species",
+      author: "Charles Darwin",
+      year: 1859,
+      type: "article",
+      genre: "Science",
+      description: "A work of scientific literature that introduced the theory of evolution by natural selection.",
+      embedding: [0.7, -0.1, 0.3, -0.8, -0.5, 0.6, 0.2]
+    }
+  ];
+  
+  export const getUniqueTypes = () => {
+    return Array.from(new Set(sampleData.map(item => item.type)));
+  };
+  
+  export const getUniqueGenres = () => {
+    return Array.from(new Set(sampleData.map(item => item.genre)));
+  };
