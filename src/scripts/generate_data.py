@@ -12,16 +12,15 @@ import json
 import numpy.linalg as LA
 
 
-def sum_pooling(
+def mean_pooling(
     model_output: Tuple[torch.Tensor, torch.Tensor], attention_mask: torch.Tensor
-) -> Tuple[torch.Tensor, torch.Tensor]:
+):
     token_embeddings = model_output[0]
     input_mask_expanded = (
         attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
     )
-    return (
-        torch.sum(token_embeddings * input_mask_expanded, 1),
-        torch.sum(input_mask_expanded, 1),
+    return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(
+        input_mask_expanded.sum(1), min=1e-9
     )
 
 
@@ -77,13 +76,10 @@ def main() -> None:
     )
 
     pca = PCA(n_components=3)
-    embed_dim = 32
 
     items = []
 
     for idx, file in enumerate(tqdm(list(data_dir.glob("*.txt")))):
-        numerator = torch.zeros(embed_dim)
-        denominator = torch.zeros(embed_dim)
         with open(file, "r") as f:
             text = f.read()
 
@@ -99,21 +95,14 @@ def main() -> None:
 
         model_output = model(**encoded_input, adapter_mask=adapter_mask)
 
-        embeddings, denom = sum_pooling(model_output, encoded_input["attention_mask"])
-
-        embeddings = embeddings.cpu()
+        embeddings = mean_pooling(model_output, encoded_input["attention_mask"])
+        embeddings = embeddings.cpu().numpy()
 
         with open(output_path, "w") as f:
             metadata = json.load(f)
 
-        for embedding in embeddings:
-            numerator += embedding
-            denominator += denom
-
-        res = numerator / (denominator + 1e-9)
-
-        res = pca.fit_transform(res.numpy())
-        res = res / (LA.norm(res, axis=1) + 1e-9)
+        embeddings_pca = pca.fit_transform(embeddings)
+        embeddings_pca = embeddings_pca / (LA.norm(embeddings_pca, axis=1) + 1e-9)
 
         item = {
             "id": str(idx),
@@ -121,7 +110,7 @@ def main() -> None:
             "author": metadata["author"],
             "year": metadata["year"],
             "type": metadata["type"],
-            "embedding": res.tolist(),
+            "embedding": embeddings_pca.tolist(),
         }
         items.append(item)
 
