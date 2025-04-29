@@ -26,9 +26,7 @@ const NodeInfo: React.FC<NodeInfoProps> = ({ item }) => {
         <span className="px-2 py-0.5 bg-purple-700/60 rounded-full text-xs border border-purple-500/30">
           {item.type}
         </span>
-        <span className="px-2 py-0.5 bg-indigo-700/60 rounded-full text-xs border border-indigo-500/30">
-          {item.genre}
-        </span>
+        
       </div>
       <p className="text-gray-200 text-sm leading-relaxed">{item.description}</p>
     </div>

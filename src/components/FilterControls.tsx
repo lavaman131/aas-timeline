@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getUniqueTypes, getUniqueGenres } from "../utils/sampleData";
+import { getUniqueTypes } from "../utils/sampleData";
 
 interface FilterControlsProps {
   onFilterChange: (filters: FilterOptions) => void;
@@ -7,15 +7,12 @@ interface FilterControlsProps {
 
 export interface FilterOptions {
   types: string[];
-  genres: string[];
 }
 
 const FilterControls = ({ onFilterChange }: FilterControlsProps) => {
   const types = getUniqueTypes();
-  const genres = getUniqueGenres();
   
   const [selectedTypes, setSelectedTypes] = useState<string[]>(types);
-  const [selectedGenres, setSelectedGenres] = useState<string[]>(genres);
 
   const handleTypeChange = (type: string) => {
     let newSelectedTypes;
@@ -25,18 +22,7 @@ const FilterControls = ({ onFilterChange }: FilterControlsProps) => {
       newSelectedTypes = [...selectedTypes, type];
     }
     setSelectedTypes(newSelectedTypes);
-    onFilterChange({ types: newSelectedTypes, genres: selectedGenres });
-  };
-
-  const handleGenreChange = (genre: string) => {
-    let newSelectedGenres;
-    if (selectedGenres.includes(genre)) {
-      newSelectedGenres = selectedGenres.filter(g => g !== genre);
-    } else {
-      newSelectedGenres = [...selectedGenres, genre];
-    }
-    setSelectedGenres(newSelectedGenres);
-    onFilterChange({ types: selectedTypes, genres: newSelectedGenres });
+    onFilterChange({ types: newSelectedTypes });
   };
 
   return (
@@ -57,25 +43,6 @@ const FilterControls = ({ onFilterChange }: FilterControlsProps) => {
               }`}
             >
               {type}
-            </button>
-          ))}
-        </div>
-      </div>
-      
-      <div>
-        <h4 className="text-sm font-medium mb-2 text-indigo-200">Genre</h4>
-        <div className="flex flex-wrap gap-2">
-          {genres.map(genre => (
-            <button
-              key={genre}
-              onClick={() => handleGenreChange(genre)}
-              className={`px-2 py-1 text-xs rounded-full transition-colors ${
-                selectedGenres.includes(genre)
-                  ? "bg-indigo-600 text-white border border-indigo-400/50 shadow-md" 
-                  : "bg-gray-800 text-gray-300 border border-gray-700"
-              }`}
-            >
-              {genre}
             </button>
           ))}
         </div>

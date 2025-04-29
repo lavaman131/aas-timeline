@@ -8,7 +8,6 @@ import type {
 } from 'plotly.js';
 
 import type { TextItem } from '../utils/sampleData';
-import { calculatePositions } from '../utils/vectorUtils';
 import type { FilterOptions } from './FilterControls';
 
 interface Graph3DProps {
@@ -22,8 +21,7 @@ const Graph3D: React.FC<Graph3DProps> = ({ data, onSelectNode, filters }) => {
   const filteredData = useMemo<TextItem[]>(() => {
     return data.filter(
       (item) =>
-        filters.types.includes(item.type) &&
-        filters.genres.includes(item.genre),
+        filters.types.includes(item.type)
     );
   }, [data, filters]);
 
@@ -33,7 +31,7 @@ const Graph3D: React.FC<Graph3DProps> = ({ data, onSelectNode, filters }) => {
       return [];
     }
     const embeddings = filteredData.map((item) => item.embedding);
-    return calculatePositions(embeddings);
+    return embeddings;
   }, [filteredData]);
 
   // 3) Build the Plotly “data” array
@@ -57,7 +55,7 @@ const Graph3D: React.FC<Graph3DProps> = ({ data, onSelectNode, filters }) => {
 
     const hoverText = filteredData.map(
       (item) =>
-        `${item.title}<br>by ${item.author} (${item.year})<br>${item.type}, ${item.genre}`,
+        `${item.title}<br>by ${item.author} (${item.year})<br>${item.type}`,
     );
 
     return [
@@ -85,7 +83,7 @@ const Graph3D: React.FC<Graph3DProps> = ({ data, onSelectNode, filters }) => {
   const layout = useMemo<Partial<PlotlyLayout>>(() => {
     return {
       autosize: true,
-      height: window.innerHeight - 50,
+      height: window.innerHeight,
       margin: { l: 0, r: 0, b: 0, t: 0 },
       paper_bgcolor: 'rgba(15, 23, 42, 0)',
       plot_bgcolor: 'rgba(15, 23, 42, 0)',
