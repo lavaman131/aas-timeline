@@ -1,0 +1,7 @@
+[project]
+name = "aas-timeline"
+version = "0.0.1"
+description = "A digital humanities project exploring relationships between embeddings in 3D vector space"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "scikit-learn", "tqdm"]
