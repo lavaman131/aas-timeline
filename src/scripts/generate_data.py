@@ -45,6 +45,7 @@ def get_args() -> argparse.Namespace:
         "--data_dir",
         type=str,
         required=True,
+        default=""
         help="Path to the data directory. Must contain .txt files.",
     )
     parser.add_argument(
