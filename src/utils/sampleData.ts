@@ -1,6 +1,6 @@
 // Sample embedding data for visualization
 // In a real application, these would be actual embeddings from an ML model
-import jsonData from '../../data/sample.json';
+import jsonData from '../data/sample.json';
 
 export interface TextItem {
     id: string;
