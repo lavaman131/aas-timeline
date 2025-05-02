@@ -88,21 +88,21 @@ def main() -> None:
 
         encoded_input = tokenizer(
             sentences, padding=True, truncation=True, return_tensors="pt"
-        )
+        )  # type: ignore
 
-        task_id = model._adaptation_map[task]
+        task_id = model._adaptation_map[task]  # type: ignore
         adapter_mask = torch.full((len(sentences),), task_id, dtype=torch.int32)
 
-        model_output = model(**encoded_input, adapter_mask=adapter_mask)
+        model_output = model(**encoded_input, adapter_mask=adapter_mask)  # type: ignore
 
         embeddings = mean_pooling(model_output, encoded_input["attention_mask"])
+        embeddings = F.normalize(embeddings, p=2, dim=1)
         embeddings = embeddings.cpu().numpy()
 
         with open(output_path, "w") as f:
             metadata = json.load(f)
 
         embeddings_pca = pca.fit_transform(embeddings)
-        embeddings_pca = embeddings_pca / (LA.norm(embeddings_pca, axis=1) + 1e-9)
 
         item = {
             "id": str(idx),

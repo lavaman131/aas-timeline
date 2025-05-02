@@ -9,8 +9,6 @@ export interface TextItem {
     year: number;
     type: "novel" | "article" | "poem" | "short story";
     description: string;
-    // This would normally be a much higher-dimensional vector
-    // But for visualization purposes, we'll use small vectors
     embedding: number[];
   }
   
