@@ -6,31 +6,16 @@ import torch
 import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModel
 import re
-from sklearn.decomposition import PCA
 import numpy as np
 import json
 import numpy.linalg as LA
-
-
-def mean_pooling(
-    model_output: Tuple[torch.Tensor, torch.Tensor], attention_mask: torch.Tensor
-):
-    token_embeddings = model_output[0]
-    input_mask_expanded = (
-        attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
-    )
-    return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(
-        input_mask_expanded.sum(1), min=1e-9
-    )
-
-
-def load_model(model_name: str) -> Tuple[AutoTokenizer, AutoModel]:
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModel.from_pretrained(model_name, trust_remote_code=True)
-    return tokenizer, model
+import pymupdf
+from torch_pca import PCA
+from natsort import natsorted
 
 
 class TextItem(TypedDict):
+    id: str
     title: str
     author: str
     year: int
@@ -44,14 +29,13 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--data_dir",
         type=str,
-        required=True,
-        default=""
+        default="./data",
         help="Path to the data directory. Must contain .txt files.",
     )
     parser.add_argument(
         "--output_path",
         type=str,
-        required=True,
+        default="res.json",
         help="Path to the output json file (including .json extension).",
     )
     return parser.parse_args()
@@ -69,8 +53,17 @@ def main() -> None:
     output_dir = output_path.parent
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    tokenizer, model = load_model("jinaai/jina-embeddings-v3")
-    task = "retrieval.query"
+    model_name = "jinaai/jina-embeddings-v3"
+
+    device_map = "cuda:0"
+
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_name, trust_remote_code=True, device_map=device_map
+    )
+    model = AutoModel.from_pretrained(
+        model_name, trust_remote_code=True, device_map=device_map
+    )
+    task = "text-matching"
 
     SENTENCE_REGEX = re.compile(
         r"(?<!\w\.\w.)(?<!\b[A-Z][a-z]\.)(?<![A-Z]\.)(?<=\.|\?)\s|\\n"
@@ -80,9 +73,15 @@ def main() -> None:
 
     items = []
 
-    for idx, file in enumerate(tqdm(list(data_dir.glob("*.txt")))):
-        with open(file, "r") as f:
-            text = f.read()
+    files = natsorted(list(data_dir.glob("*.pdf")))
+
+    for idx, file in enumerate(tqdm(files)):
+        metadata_file = file.with_suffix(".json")
+        with open(metadata_file, "r") as f:
+            metadata = json.load(f)
+
+        doc = pymupdf.open(file)
+        text = "".join([page.get_text() for page in doc])
 
         sentences = SENTENCE_REGEX.split(text)
         sentences = [s.strip() for s in sentences if s.strip()]
@@ -92,28 +91,46 @@ def main() -> None:
         )  # type: ignore
 
         task_id = model._adaptation_map[task]  # type: ignore
-        adapter_mask = torch.full((len(sentences),), task_id, dtype=torch.int32)
+        adapter_mask = torch.full(
+            (len(sentences),), task_id, dtype=torch.int32, device=device_map
+        )
+
+        encoded_input = {k: v.to(device_map) for k, v in encoded_input.items()}
 
         model_output = model(**encoded_input, adapter_mask=adapter_mask)  # type: ignore
 
-        embeddings = mean_pooling(model_output, encoded_input["attention_mask"])
-        embeddings = F.normalize(embeddings, p=2, dim=1)
-        embeddings = embeddings.cpu().numpy()
+        attn_mask = encoded_input["attention_mask"].float()
 
-        with open(output_path, "w") as f:
-            metadata = json.load(f)
+        token_embeddings = model_output[0]
 
-        embeddings_pca = pca.fit_transform(embeddings)
+        embed_dim = token_embeddings.size(-1)
+        token_embeddings = token_embeddings.view(-1, embed_dim)
 
-        item = {
+        pca = PCA(n_components=3)
+
+        embeddings = pca.fit_transform(token_embeddings.float())
+
+        embedding = torch.sum(embeddings * attn_mask.view(-1, 1), 0) / torch.clamp(
+            attn_mask.sum(), min=1e-9
+        )
+
+        embedding = F.normalize(embedding, p=2, dim=-1)
+        embedding = embedding.cpu().numpy()
+
+        item: TextItem = {
             "id": str(idx),
             "title": file.stem,
             "author": metadata["author"],
             "year": metadata["year"],
             "type": metadata["type"],
-            "embedding": embeddings_pca.tolist(),
+            "description": metadata["description"],
+            "embedding": embedding.tolist(),
         }
         items.append(item)
 
     with open(output_path, "w") as f:
         json.dump(items, f)
+
+
+if __name__ == "__main__":
+    main()

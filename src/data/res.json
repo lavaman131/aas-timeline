@@ -1,0 +1,327 @@
+[
+  {
+    "id": "0",
+    "title": "CRT - Harris, Lee, Crenshaw-ocr",
+    "author": "Cheryl I. Harris; Robert G. Lee; Kimberl\u00e9 Crenshaw",
+    "year": 1993,
+    "type": "article",
+    "description": "A set of foundational essays in critical race theory by multiple authors. Harris's piece (e.g. 'Whiteness as Property') argues that whiteness functions as a valuable property right in American law, Lee's work examines racialization of Asian Americans in U.S. culture, and Crenshaw's landmark essay on intersectionality analyzes how race and gender intersect in the oppression of women of color. Together, these writings (from the early 1990s) illuminate how race is a social construct embedded in legal and social systems, and they helped form the intellectual backbone of Critical Race Theory.",
+    "embedding": [
+      0.9961388111114502, -0.020236602053046227, -0.08542896807193756
+    ]
+  },
+  {
+    "id": "1",
+    "title": "Contemporary Asian America Intro & Chs 1-2-ocr",
+    "author": "Min Zhou and James V. Gatewood (eds.)",
+    "year": 2000,
+    "type": "article",
+    "description": "An expansive anthology of key scholarly writings on Asian American experiences. Covering topics from immigration and community formation to racism, gender, and activism, this reader provides a broad overview of Asian American studies. It integrates research and first-person accounts to trace how Asian American communities have developed since the 1960s and to illuminate contemporary issues at the turn of the 21st century",
+    "embedding": [
+      -0.9940451383590698, -0.09944954514503479, 0.044540584087371826
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Contemporary Asian American Activism excerpts-ocr_1",
+    "author": "Diane C. Fujino and Robyn Magalit Rodriguez (eds.)",
+    "year": 2022,
+    "type": "article",
+    "description": "A collection of essays and interviews with modern Asian American organizers fighting for social justice. By bringing together grassroots activists and scholar-activists, the book covers movements ranging from prison abolition and immigrant rights to environmental justice and labor organizing. The contributors share victories, struggles, and lessons from the field, emphasizing cross-racial solidarity, 'radical care,' and the sustaining of activist communities for the long haul. It offers an in-depth look at twenty-first-century Asian American activism and visions for collective liberation.",
+    "embedding": [-0.9977787137031555, 0.05826719105243683, 0.03228989988565445]
+  },
+  {
+    "id": "3",
+    "title": "DPL_AsianAmerica_Ch3-ocr",
+    "author": "David Palumbo-Liu",
+    "year": 1999,
+    "type": "article",
+    "description": "A critical exploration of the idea of \u201cAsian/America\u201d at the crossroads of the Asian and American. Palumbo-Liu discusses how Asian Americans have historically been positioned on a \u201cracial frontier\u201d \u2013 neither fully inside nor outside the nation. Chapter 3 of this book delves into the cultural and political dynamics of a specific era (the context suggests it may be about the late 20th century) when globalization and transnational flows became more pronounced. The author examines literature and events that reveal the tensions between embracing an American national identity and maintaining trans-Pacific connections. Overall, the book argues that Asian American identity is formed through movements across geographical, racial, and cultural boundaries, challenging the fixed notion of nationhood.",
+    "embedding": [
+      0.9954240322113037, -0.09498396515846252, -0.010446938686072826
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Eng Racial Castration Intro & Ch 3-ocr",
+    "author": "David L. Eng",
+    "year": 2001,
+    "type": "article",
+    "description": "A scholarly analysis of how Asian American men have been culturally depicted and psychologically affected by emasculation. Eng uses the term \u201cracial castration\u201d to describe the process by which Asian American masculinity is feminized or rendered impotent in dominant U.S. narratives. Through readings of literature, film, and psychoanalytic theory, the book examines stereotypes like the desexualized Asian male or the feminized Asian queer, and shows how these images are tied to histories of war and exclusion. Eng's work challenges us to understand Asian American male identity beyond the tropes of powerlessness and to see how these racialized gender norms are constructed and can be resisted.",
+    "embedding": [
+      0.9933461546897888, -0.1070038378238678, -0.042586199939250946
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Erika Lee Making of Asian America Chs Chs 7-9-ocr",
+    "author": "Erika Lee",
+    "year": 2015,
+    "type": "article",
+    "description": "A comprehensive history of Asian Americans from the late 19th century through the 20th and 21st centuries. In these middle chapters, Lee covers pivotal events such as the fight against Asian exclusion laws, the experiences of Asian Americans during World War II (e.g. Japanese American incarceration), and the changes brought by the 1965 Immigration and Nationality Act which opened the doors to new Asian immigration. She also discusses the Vietnam War and refugee waves in chapters 7\u20139, illustrating how Asian America was shaped by Cold War geopolitics. Throughout, Lee emphasizes the resilience of Asian American communities and their contributions to U.S. society, even as they faced racism and evolving stereotypes.",
+    "embedding": [
+      -0.9959105253219604, 0.08639339357614517, -0.026430100202560425
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Erika Lee Making of Asian America Chs Intro Chs 1-4-ocr",
+    "author": "Erika Lee",
+    "year": 2015,
+    "type": "article",
+    "description": "A sweeping historical narrative of Asian Americans spanning over 400 years. Lee chronicles the earliest Asian voyages to the Americas, the waves of immigration from China, Japan, Korea, the Philippines, India, and beyond, and the community building and challenges these immigrants faced. Covering events from the Gold Rush and exclusion laws to World War II incarceration and the post-1965 immigration boom, the book illustrates how Asian Americans have been integral to U.S. history while continually fighting for belonging and justice.",
+    "embedding": [
+      -0.9960637092590332, 0.08121040463447571, -0.03552607446908951
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Gibson_JohnnyMnemonic-ocr",
+    "author": "William Gibson",
+    "year": 1981,
+    "type": "short story",
+    "description": "A seminal cyberpunk short story about a data courier who stores sensitive information in his brain. Johnny, a hustler in a high-tech underground future, has a cybernetic implant that allows him to smuggle data, but when he takes on a gig that overloads his memory, he finds himself hunted by the Yakuza. With the help of a heavily augmented bodyguard (and even a cybernetic dolphin), Johnny fights to survive. The story showcases Gibson's dystopian future of virtual information and street tech, and it paved the way for his later novel Neuromancer with its gritty portrayal of hackers, hitmen, and digital secrets.",
+    "embedding": [
+      0.9971469640731812, -0.04633324593305588, -0.05959158018231392
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Huang Surface Relations Ch 2-ocr",
+    "author": "Vivian L. Huang",
+    "year": 2022,
+    "type": "article",
+    "description": "A scholarly work analyzing the concept of inscrutability as both a stereotype and an artistic strategy. Huang traces how Asian and Asian American artists have taken the longstanding stereotype of the \u201cinscrutable Oriental\u201d - the idea that Asian faces or feelings are unreadable - and turned it into a deliberate performance or aesthetic. In Chapter 2, she likely focuses on a particular case study (for instance, a performance artist or a film) to show how playing with surface, opacity, and silence can be a queer form of expression. By embracing ambiguity and unreadability, these artists challenge audiences' desire to \u201cknow\u201d or stereotype Asians, thereby subverting power dynamics. The book as a whole proposes that surface is not shallow at all, but a meaningful site of resisting racial and gender legibility.",
+    "embedding": [0.997995913028717, 0.05927872285246849, 0.022139841690659523]
+  },
+  {
+    "id": "9",
+    "title": "KOCHAI-HungryRickyDaddy-2018-ocr",
+    "author": "Jamil Jan Kochai",
+    "year": 2018,
+    "type": "short story",
+    "description": "A short story about protest, sacrifice, and the personal toll of political injustice. It follows an Afghan American college student in California who starves himself as a hunger strike against Israeli violence in Palestine. As 'Hungry Ricky Daddy' (the nickname he earns) pushes his body to its limits, the story explores themes of diaspora identity, empathy across borders, and the impact of global conflicts on individual lives. Kochai\u2019s tale is poignant and politically charged, illuminating how a distant struggle can become intensely personal.",
+    "embedding": [
+      0.9999263882637024, -0.012120522558689117, -0.0005164286703802645
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Lila Sharif Afterwards and Other Non-Endings-ocr",
+    "author": "Lila Sharif",
+    "year": 2021,
+    "type": "article",
+    "description": "A reflective essay on how wars do not simply end, but continue to shape lives in their aftermath. Sharif juxtaposes the ongoing struggles in Palestine and Afghanistan, examining how these conflicts persist as \u201cnon-endings\u201d that haunt survivors and diasporic communities. She discusses the enduring effects of war\u2014trauma, occupation, militarization\u2014that linger long after official combat has ceased, calling attention to the shared experiences of Palestinians and Afghans living in the shadow of endless war.",
+    "embedding": [
+      0.9996092915534973, 0.0021873151417821646, 0.027866369113326073
+    ]
+  },
+  {
+    "id": "11",
+    "title": "Lisa_Lowe_Heterogeneity-ocr",
+    "author": "Lisa Lowe",
+    "year": 1991,
+    "type": "article",
+    "description": "A influential essay that challenges any single definition of \u201cAsian American.\u201d Lowe argues that Asian American identity should be understood as internally diverse (heterogeneous), formed through mixtures (hybridity), and not reducible to a unified whole (multiplicity). Pushing back against earlier attempts to define a monolithic Asian American experience, she emphasizes differences of ethnicity, gender, class, and history within Asian America. This theoretical piece, later included in Lowe\u2019s book Immigrant Acts, helped shift the discourse toward recognizing complexity and contradiction in Asian American cultural politics.",
+    "embedding": [
+      -0.9952096343040466, -0.028963182121515274, 0.09337563812732697
+    ]
+  },
+  {
+    "id": "12",
+    "title": "Loan_Dao_Generation_Rising_Chs1&4&5-ocr",
+    "author": "Loan Thi Dao",
+    "year": 2020,
+    "type": "article",
+    "description": "An ethnographic study of a new generation of Southeast Asian American youth activism. Dao traces the development of Providence Youth Student Movement (PrYSM), a queer, Southeast Asian youth-led organization in Providence, RI . She explores how young Southeast Asian American activists form collective identities, build intergenerational coalitions, and create their own movement culture while navigating pressures from community elders and funders. The book highlights the challenges and growth of these youth organizers as they fight for social justice on their own terms.",
+    "embedding": [
+      -0.9982430338859558, 0.016658522188663483, -0.05686180293560028
+    ]
+  },
+  {
+    "id": "13",
+    "title": "Louie & Iijima asian americans movement (1)-ocr_2",
+    "author": "Steve Louie and Glenn K. Omatsu (eds.)",
+    "year": 2001,
+    "type": "article",
+    "description": "A wide-ranging collection of essays and materials documenting the Asian American social activism of 1965-2001. This anthology presents personal accounts, historical analyses, and visual artifacts of the Asian American Movement, capturing its strategies, voices, and legacy in building community and fighting for civil rights.",
+    "embedding": [
+      0.9934645295143127, -0.021225346252322197, 0.11215058714151382
+    ]
+  },
+  {
+    "id": "14",
+    "title": "MimiNguyen Gift of Freedom Excerpt-ocr_1",
+    "author": "Mimi Thi Nguyen",
+    "year": 2012,
+    "type": "article",
+    "description": "An examination of U.S. empire and its narrative of \u201cgiving freedom\u201d through war and refugee rescue. Nguyen focuses on Vietnamese refugees to the United States, unpacking how the U.S. represents itself as a benevolent savior granting them the \u201cgift\u201d of freedom. She argues that this gift actually comes with strings attached: refugees are expected to show gratitude and become model citizens, effectively indebting them to the nation. The book connects the dots between the military intervention in Southeast Asia, the refugee experience, and neoliberal ideas of debt and obligation. Nguyen\u2019s critique reveals how humanitarian gestures can mask and perpetuate imperial power.",
+    "embedding": [
+      0.9949781894683838, -0.0039169033989310265, -0.1000153049826622
+    ]
+  },
+  {
+    "id": "15",
+    "title": "Mirikitani - Awake in the River - Excerpts-ocr",
+    "author": "Janice Mirikitani",
+    "year": 1978,
+    "type": "poem",
+    "description": "A groundbreaking collection of poetry and prose by an Asian American feminist poet. Mirikitani's work in Awake in the River is fierce and unapologetic, confronting sexual violence, anti-Asian racism, and the trauma of Japanese American incarceration. Through brash and politically outspoken poems, she emphasizes the power of awakening from silence and fighting for justice, embodying a singular voice that advances women-of-color feminism and global anti-imperialist solidarity.",
+    "embedding": [
+      0.9999811053276062, 0.005515387747436762, -0.002734260866418481
+    ]
+  },
+  {
+    "id": "16",
+    "title": "Najwa Mayer Muslim American Protest Iconography-ocr",
+    "author": "Najwa Mayer",
+    "year": 2023,
+    "type": "article",
+    "description": "An analysis of the iconic imagery of Muslim American women in contemporary protests. Mayer focuses on the famous 2017 poster of a Muslim American woman wearing a U.S. flag hijab, tracing how this image was produced, altered, and circulated. She examines the intersections of race, gender, and secularism in this 'protest iconography,' discussing how the Muslim female figure is represented and contested in liberal dissent, and what these representations mean for American national belonging.",
+    "embedding": [
+      0.998432993888855, -0.041953690350055695, 0.037031207233667374
+    ]
+  },
+  {
+    "id": "17",
+    "title": "Ninh Passing for Perfect Ch 2-ocr",
+    "author": "Erin Khu\u00ea Ninh",
+    "year": 2021,
+    "type": "article",
+    "description": "A study of the extreme pressures of the \u201cmodel minority\u201d myth on Asian American youth. Ninh investigates real cases of Asian Americans who pretended to be perfect students (such as faking college enrollment or academic success) and even resorted to crime to hide their failures. She argues that being a \u201cmodel minority\u201d is not simply a myth but an identity built on internalized pressures and aspirations, with devastating costs. The book differentiates between deliberate con artists and those who feel unable to stop \u201cpassing\u201d as the ideal student, examining the toll of perfectionism imposed by immigrant success narratives.",
+    "embedding": [
+      -0.9970905184745789, 0.017751552164554596, -0.07413000613451004
+    ]
+  },
+  {
+    "id": "18",
+    "title": "Omi & Winant Racial Formation Ch 4-ocr_1",
+    "author": "Michael Omi and Howard Winant",
+    "year": 1986,
+    "type": "article",
+    "description": "A foundational text in sociology that proposes a theory of race as a socially constructed process. Omi and Winant define race as neither biologically real nor purely illusion, but as \u201ca very real social classification\u201d shaped by history and power relations. They introduce racial formation as the process by which social, economic, and political forces create and transform racial categories. Chapter 4 (in early editions) further examines how U.S. institutions (\u201cthe racial state\u201d) and social movements continually interact to remake racial meanings over time, illustrating race's role in structuring society.",
+    "embedding": [0.9959510564804077, -0.08411766588687897, 0.03171295300126076]
+  },
+  {
+    "id": "19",
+    "title": "Porcelain-ocr",
+    "author": "Chay Yew",
+    "year": 1992,
+    "type": "short story",
+    "description": "A one-act stage play centered on a gay Chinese-British man who commits a crime of passion. Porcelain follows a Chinese teenager in East London who is found with the body of his white lover in a public restroom. . Through the ensuing investigation and monologues, the play explores themes of love, obsession, and the loneliness of being an outsider. Yew has noted that the work is not simply about racism or homophobia, but about intimacy and \u201cbeing different,\u201d a universal story of alienation and desire.",
+    "embedding": [0.9980776906013489, 0.05606327950954437, -0.02641529217362404]
+  },
+  {
+    "id": "20",
+    "title": "Puar Right to Maim Ch 4-ocr_1",
+    "author": "Jasbir K. Puar",
+    "year": 2017,
+    "type": "article",
+    "description": "A theoretical analysis of how state power uses bodily injury as a tool of control. In this work, Puar argues that governments exercise a 'right to maim' - deliberately causing debility in certain populations rather than outright killing - as a means of regulating and dominating them. Using examples like Israel's policies toward Palestinians, she links disability studies with biopolitics, showing how the production of debility (permanent injury, economic and social incapacitation) is used to manage marginalized communities and reinforce hierarchies of race, gender, and empire.",
+    "embedding": [
+      0.9998748898506165, -0.015711715444922447, 0.0018129624659195542
+    ]
+  },
+  {
+    "id": "21",
+    "title": "Puar Terrorist Assemblages Ch 1-ocr_1",
+    "author": "Jasbir K. Puar",
+    "year": 2007,
+    "type": "article",
+    "description": "A pathbreaking queer theory text that introduces the concept of homonationalism. Puar argues that sexuality, race, gender, and nation have realigned such that some LGBTQ subjects are now embraced by nationalist and pro-war agendas. The book shows how the US and other Western nations include certain queer individuals (portrayed as modern and worthy of protection) into the nation, in order to contrast them with a racialized 'terrorist' other. This inclusion of gay and lesbian rights within nationalism comes at the expense of \u201cOrientalized\u201d populations, demonstrating how even queer acceptance can reinforce imperialism and racism.",
+    "embedding": [
+      0.9985067844390869, -0.054578252136707306, -0.0023376846220344305
+    ]
+  },
+  {
+    "id": "22",
+    "title": "REP16300_05_Nadal-ocr",
+    "author": "Kevin L. Nadal",
+    "year": 2011,
+    "type": "article",
+    "description": "A comprehensive overview of the psychology and mental health issues of Filipino Americans. Nadal examines how Filipino American identity has been shaped by colonial history, immigration, and cultural values, and how these factors affect individuals\u2019 experiences (e.g. with family dynamics, racial microaggressions, or LGBTQ identities). The book presents research findings along with practical insights for counseling and community support. It also addresses the colonial mentality and other unique challenges faced by Filipino Americans, while offering strategies for empowerment and well-being in this populous Asian American subgroup.",
+    "embedding": [
+      -0.9975312948226929, -0.03628790006041527, 0.060121383517980576
+    ]
+  },
+  {
+    "id": "23",
+    "title": "Robles Rappin With Ten Thousand Carabaos in the Dark (1)-ocr",
+    "author": "Al Robles",
+    "year": 1996,
+    "type": "poem",
+    "description": "A collection of poems and stories chronicling a century of Filipino American life. Robles - a pivotal Filipino American poet and community organizer - gives voice to immigrant farm laborers, shopkeepers, elders (\u201cManongs\u201d), and everyday folk, painting their struggles and humor with warmth and insight. His storytelling is deeply rooted in San Francisco's Filipino community and spans generations, using vibrant characters and oral history style to celebrate the resilience and spirit of Pilipino Americans.",
+    "embedding": [-0.9970507621765137, 0.06964609771966934, 0.0322345495223999]
+  },
+  {
+    "id": "24",
+    "title": "Roots Asian American Reader Excerpts-ocr_2",
+    "author": "Amy Tachiki, Eddie Wong, Franklin Odo, and Buck Wong (eds.)",
+    "year": 1971,
+    "type": "article",
+    "description": "An anthology of essays, poems, and writings that became a foundational textbook for Asian American Studies. Published in 1971 as the first major collection focused on Asian Americans, it delves into the 'roots' of issues facing Asian American communities and was widely used in college courses for its mix of scholarly and firsthand perspectives.",
+    "embedding": [
+      -0.9964778423309326, -0.05810117721557617, -0.06046697124838829
+    ]
+  },
+  {
+    "id": "25",
+    "title": "Sa\u00efd_Orientalism_excerpt-ocr",
+    "author": "Edward W. Said",
+    "year": 1978,
+    "type": "article",
+    "description": "Edward Said's seminal work examining how the Western world has historically imagined and depicted 'the East.' Orientalism argues that European scholars, writers, and colonial administrators constructed the Orient (the Middle East, North Africa, and Asia) as an exotic, inferior opposite to the West, a discourse that justified colonial domination. Said details how this 'Orientalist' framework portrays Eastern cultures as unchanging, mysterious, and irrational, and how these stereotypes have real political power. This groundbreaking book essentially founded postcolonial studies by revealing the deep ties between knowledge and imperial power in Western representations of Asian and Arab peoples.",
+    "embedding": [0.9958320260047913, 0.08820760250091553, 0.02319568209350109]
+  },
+  {
+    "id": "26",
+    "title": "Sau-lingWongDenationalization-ocr",
+    "author": "Sau-Ling C. Wong",
+    "year": 1995,
+    "type": "article",
+    "description": "A critical essay calling for a rethinking of Asian American studies beyond U.S.-centric national frameworks. Writing in the mid-1990s, Wong observes that Asian American cultural criticism was at a \u201ctheoretical crossroads,\u201d and she urges a \u201cdenationalized\u201d approach that accounts for diaspora, transnational ties, and the multiplicity of Asian American experiences. She critiques earlier Asian American literary debates for being too narrowly focused on nation-bound identity politics and argues that globalization and immigration trends demand new methods that transcend national borders. This essay helped push the field toward more global and intersectional analyses of Asian American culture.",
+    "embedding": [
+      0.9981178045272827, 0.014452840201556683, -0.05959811806678772
+    ]
+  },
+  {
+    "id": "27",
+    "title": "Umayya Cable Compulsory Zionism-ocr",
+    "author": "Umayyah Cable",
+    "year": 2022,
+    "type": "article",
+    "description": "A short scholarly essay that traces the origin and usage of the term 'compulsory Zionism.' Cable examines how, especially in American contexts, there is often an implicit expectation or pressure to accept Zionism (support for the Israeli state) as a normative stance, and she explores how this has been critiqued by scholars and activists. By outlining the genealogy of the concept, she highlights the contradictions in demanding ideological conformity on Israel-Palestine. The piece also considers how this enforced stance affects Palestinians \u2014 rendering their very existence and narratives as politically contentious \u2014 and it situates the discussion in broader Arab American solidarity politics.",
+    "embedding": [
+      0.9964230060577393, 0.07830823957920074, -0.031765084713697433
+    ]
+  },
+  {
+    "id": "28",
+    "title": "Viet Thanh Nguyen Race & Resistance Conclusion-ocr",
+    "author": "Viet Thanh Nguyen",
+    "year": 2002,
+    "type": "article",
+    "description": "A critical book that reassesses how Asian American literature has been read in terms of political resistance. Nguyen argues that scholars often interpret Asian American writings only as acts of protest against racism, which can oversimplify their meaning. In the conclusion, he summarizes his call for more nuanced readings: Asian American literature can both challenge and accommodate aspects of American life, and it should be appreciated for its aesthetic complexities, not just its resistance narrative. He points out that an overemphasis on resistance might ignore cases where writers express ambivalence or critique their own communities. By the end, Nguyen advocates for a literary analysis that sees Asian American authors as artists and intellectuals engaging with American culture in varied ways, rather than as automatic revolutionaries.",
+    "embedding": [-0.9941229820251465, 0.0938875749707222, -0.05389433726668358]
+  },
+  {
+    "id": "29",
+    "title": "Vivian Huang Surface Relations Intro-ocr",
+    "author": "Vivian L. Huang",
+    "year": 2022,
+    "type": "article",
+    "description": "In the introduction to Surface Relations, Huang lays out how the notion of Asian 'inscrutability' (appearing emotionless or unreadable) has been imposed on Asian/American subjects and how it can be reinterpreted. She explains that Asian American artists and performers have strategically used inscrutability \u2014 staying on the surface, refusing to reveal everything \u2014 as a queer and artistic tactic. This approach turns a racist clich\u00e9 into a creative force, allowing artists to control their representation. The intro frames the book's exploration of various media (performance art, visual art, literature) where opacity and ambiguity become tools to question the demand for minorities to make themselves transparent or easily understood.",
+    "embedding": [
+      0.9945449829101562, -0.10113035887479782, -0.025553137063980103
+    ]
+  },
+  {
+    "id": "30",
+    "title": "gould craniometry-ocr",
+    "author": "Stephen Jay Gould",
+    "year": 1981,
+    "type": "article",
+    "description": "A critical historical analysis of 19th-century racial science and skull measurement. Gould examines how scientists like Samuel Morton collected and compared human skulls to rank races, revealing the biased methods and assumptions that underpinned these craniometric studies. This work (from Gould's The Mismeasure of Man) exposes how racial prejudices were cloaked as objective science in early American anthropology.",
+    "embedding": [0.998573362827301, 0.04388435184955597, 0.030420618131756783]
+  }
+]
