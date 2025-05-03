@@ -57,9 +57,7 @@ def main() -> None:
 
     device_map = "cuda:0"
 
-    tokenizer = AutoTokenizer.from_pretrained(
-        model_name, trust_remote_code=True, device_map=device_map
-    )
+    tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
     model = AutoModel.from_pretrained(
         model_name, trust_remote_code=True, device_map=device_map
     )
@@ -69,7 +67,9 @@ def main() -> None:
         r"(?<!\w\.\w.)(?<!\b[A-Z][a-z]\.)(?<![A-Z]\.)(?<=\.|\?)\s|\\n"
     )
 
-    pca = PCA(n_components=3)
+    # pca = PCA(n_components=3)
+    truncate_dim = 3
+    task_id = model._adaptation_map[task]  # type: ignore
 
     items = []
 
@@ -90,7 +90,6 @@ def main() -> None:
             sentences, padding=True, truncation=True, return_tensors="pt"
         )  # type: ignore
 
-        task_id = model._adaptation_map[task]  # type: ignore
         adapter_mask = torch.full(
             (len(sentences),), task_id, dtype=torch.int32, device=device_map
         )
@@ -101,20 +100,22 @@ def main() -> None:
 
         attn_mask = encoded_input["attention_mask"].float()
 
-        token_embeddings = model_output[0]
+        embeddings = model_output[0][..., :truncate_dim]
 
-        embed_dim = token_embeddings.size(-1)
-        token_embeddings = token_embeddings.view(-1, embed_dim)
+        embed_dim = embeddings.size(-1)
+        embeddings = embeddings.view(-1, embed_dim)
 
-        pca = PCA(n_components=3)
+        # std, mean = torch.std_mean(embeddings, dim=0, keepdim=True)
+        # embeddings = (embeddings - mean) / (std + 1e-6)
 
-        embeddings = pca.fit_transform(token_embeddings.float())
+        # embeddings = pca.fit_transform(embeddings.float())
 
         embedding = torch.sum(embeddings * attn_mask.view(-1, 1), 0) / torch.clamp(
             attn_mask.sum(), min=1e-9
         )
 
         embedding = F.normalize(embedding, p=2, dim=-1)
+
         embedding = embedding.cpu().numpy()
 
         item: TextItem = {
