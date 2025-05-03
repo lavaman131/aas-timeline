@@ -10,7 +10,7 @@ import numpy as np
 import json
 import numpy.linalg as LA
 import pymupdf
-from torch_pca import PCA
+from sklearn.decomposition import PCA
 from natsort import natsorted
 
 
@@ -67,13 +67,14 @@ def main() -> None:
         r"(?<!\w\.\w.)(?<!\b[A-Z][a-z]\.)(?<![A-Z]\.)(?<=\.|\?)\s|\\n"
     )
 
-    # pca = PCA(n_components=3)
-    truncate_dim = 3
+    truncate_dim = 1024
     task_id = model._adaptation_map[task]  # type: ignore
 
     items = []
 
     files = natsorted(list(data_dir.glob("*.pdf")))
+
+    all_embeddings = np.zeros((len(files), truncate_dim))
 
     for idx, file in enumerate(tqdm(files)):
         metadata_file = file.with_suffix(".json")
@@ -105,29 +106,40 @@ def main() -> None:
         embed_dim = embeddings.size(-1)
         embeddings = embeddings.view(-1, embed_dim)
 
-        # std, mean = torch.std_mean(embeddings, dim=0, keepdim=True)
-        # embeddings = (embeddings - mean) / (std + 1e-6)
-
-        # embeddings = pca.fit_transform(embeddings.float())
-
-        embedding = torch.sum(embeddings * attn_mask.view(-1, 1), 0) / torch.clamp(
+        embeddings = torch.sum(embeddings * attn_mask.view(-1, 1), 0) / torch.clamp(
             attn_mask.sum(), min=1e-9
         )
 
-        embedding = F.normalize(embedding, p=2, dim=-1)
+        embeddings = embeddings.cpu().numpy()
 
-        embedding = embedding.cpu().numpy()
+        all_embeddings[idx] = embeddings
 
         item: TextItem = {
             "id": str(idx),
-            "title": file.stem,
+            "title": metadata["title"],
             "author": metadata["author"],
             "year": metadata["year"],
             "type": metadata["type"],
             "description": metadata["description"],
-            "embedding": embedding.tolist(),
+            "embedding": [],
         }
         items.append(item)
+
+    pca = PCA(n_components=3)
+
+    mean = np.mean(all_embeddings, axis=0)
+    std = np.std(all_embeddings, axis=0)
+
+    all_embeddings = (all_embeddings - mean) / (std + 1e-6)
+
+    all_embeddings = pca.fit_transform(all_embeddings)
+
+    norm = LA.norm(all_embeddings, axis=-1, keepdims=True)
+
+    all_embeddings = all_embeddings / (norm + 1e-6)
+
+    for idx, item in enumerate(items):
+        item["embedding"] = all_embeddings[idx].tolist()
 
     with open(output_path, "w") as f:
         json.dump(items, f)
