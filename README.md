@@ -9,6 +9,7 @@ This project is a proof-of-concept digital humanities project exploring relation
 *   Displays detailed information about the selected text ([`src/components/NodeInfo.tsx`](src/components/NodeInfo.tsx)).
 *   Filtering capabilities based on text type ([`src/components/FilterControls.tsx`](src/components/FilterControls.tsx)).
 *   Data processing pipeline using Python, Transformers, and Scikit-learn ([`src/scripts/generate_data.py`](src/scripts/generate_data.py)).
+*   Stats sidebar displaying correlation data between texts ([`src/components/Home.tsx`](src/components/Home.tsx), [`src/data/stats.html`](src/data/stats.html)).
 
 ## Technology Stack
 
@@ -52,7 +53,7 @@ The 3D visualization relies on embeddings generated from PDF documents located i
     *   Read text from PDFs using PyMuPDF.
     *   Load metadata from JSON files.
     *   Generate embeddings using the `jinaai/jina-embeddings-v3` model.
-    *   Perform PCA to reduce embeddings to 3 dimensions.
+    *   Extract Perform truncation of embeddings to three dimensions.
     *   Normalize the embeddings.
     *   Save the processed data, including embeddings, to [`src/data/res.json`](src/data/res.json).
 3. Run the stats generation script:
@@ -63,7 +64,8 @@ The 3D visualization relies on embeddings generated from PDF documents located i
     *   Load the processed data (including embeddings) from the specified JSON file (`res.json`).
     *   Calculate the pairwise correlation between the 3D embeddings of all texts.
     *   For each text, identify the text with the highest correlation (most similar embedding).
-    *   Save a CSV file (`stats.csv`) listing each text's title, the title of its closest match, and the correlation score between them.
+    *   Save a CSV file (`stats.csv`) listing each text's title, the title of its closest match, and the correlation score.
+    *   Generate an HTML table fragment (`src/data/stats.html`) based on the CSV data, styled for display in the application's stats sidebar.
 
 ## Running the Development Server
 
