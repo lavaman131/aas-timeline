@@ -1,31 +1,31 @@
 Title,Closest Title,Correlation
-"Critical Race Theory (Selected Writings by Harris, Lee, Crenshaw)",Racial Formation in the United States,0.9996678105233663
-Contemporary Asian America: A Multidisciplinary Reader,The Making of Asian America: A History,0.998162304130481
-Contemporary Asian American Activism: Building Movements for Liberation,Generation Rising: A New Politics of Southeast Asian American Activism,0.9949590209214515
-Asian/American: Historical Crossings of a Racial Frontier,Surface Relations: Queer Forms of Asian American Inscrutability,0.9974703980384654
-Racial Castration: Managing Masculinity in Asian America,Passing for Perfect: College Impostors and Other Model Minorities,0.9901885037738091
-The Making of Asian America: A History,Generation Rising: A New Politics of Southeast Asian American Activism,0.9917770014319601
-The Making of Asian America: A History,Contemporary Asian America: A Multidisciplinary Reader,0.9981623041304811
-Johnny Mnemonic,Awake in the River,0.99870029308193
-Surface Relations: Queer Forms of Asian American Inscrutability,American Polygeny and Craniometry: The Origins of the American School of Anthropology,0.9670959997175412
-Hungry Ricky Daddy,Awake in the River,0.8771841874678017
-"Afterwards and Other Non-Endings: Palestine, Afghanistan, and the Afterlives of War",Compulsory Zionism and Palestinian Existence: A Genealogy,0.9999283331149998
-"Heterogeneity, Hybridity, Multiplicity: Marking Asian American Differences",Race and Resistance: Literature and Politics in Asian America,0.99957054401857
-Generation Rising: A New Politics of Southeast Asian American Activism,Contemporary Asian American Activism: Building Movements for Liberation,0.9949590209214515
-Asian Americans: The Movement and the Moment,Passing for Perfect: College Impostors and Other Model Minorities,0.996060955244136
-"The Gift of Freedom: War, Debt, and Other Refugee Passages",Contemporary Asian American Activism: Building Movements for Liberation,0.9808102613261217
-Awake in the River,Johnny Mnemonic,0.99870029308193
-Muslim American Protest Iconography and Revisionism: On the Gendered-Racial and Secular Aesthetics of (Neo)Liberal Dissent,The Making of Asian America: A History,0.9675361942252237
-Passing for Perfect: College Impostors and Other Model Minorities,Asian Americans: The Movement and the Moment,0.9960609552441361
-Racial Formation in the United States,"Critical Race Theory (Selected Writings by Harris, Lee, Crenshaw)",0.9996678105233663
-Porcelain,Rappin' With Ten Thousand Carabaos in the Dark,0.9971484879236323
-"The Right to Maim: Debility, Capacity, Disability",Terrorist Assemblages: Homonationalism in Queer Times,0.9658286146341905
-Terrorist Assemblages: Homonationalism in Queer Times,"The Right to Maim: Debility, Capacity, Disability",0.9658286146341905
-"Filipino American Psychology: A Handbook of Theory, Research, and Clinical Practice","Critical Race Theory (Selected Writings by Harris, Lee, Crenshaw)",0.9995944240087123
-Rappin' With Ten Thousand Carabaos in the Dark,Porcelain,0.9971484879236323
-Roots: An Asian American Reader,"Filipino American Psychology: A Handbook of Theory, Research, and Clinical Practice",0.9994646069571113
-Denationalization Reconsidered: Asian American Cultural Criticism at a Theoretical Crossroads,Roots: An Asian American Reader,0.9976339056060357
-Compulsory Zionism and Palestinian Existence: A Genealogy,"Afterwards and Other Non-Endings: Palestine, Afghanistan, and the Afterlives of War",0.9999283331149997
-Race and Resistance: Literature and Politics in Asian America,"Heterogeneity, Hybridity, Multiplicity: Marking Asian American Differences",0.99957054401857
-Surface Relations: Queer Forms of Asian American Inscrutability,Asian/American: Historical Crossings of a Racial Frontier,0.9974703980384654
-American Polygeny and Craniometry: The Origins of the American School of Anthropology,Surface Relations: Queer Forms of Asian American Inscrutability,0.9670959997175412
+"Critical Race Theory (Selected Writings by Harris, Lee, Crenshaw)",Racial Formation in the United States,0.892844400746311
+Contemporary Asian America: A Multidisciplinary Reader,Roots: An Asian American Reader,0.9287520912083383
+Contemporary Asian American Activism: Building Movements for Liberation,Generation Rising: A New Politics of Southeast Asian American Activism,0.9067437221084169
+Asian/American: Historical Crossings of a Racial Frontier,Racial Castration: Managing Masculinity in Asian America,0.8967044894689358
+Racial Castration: Managing Masculinity in Asian America,Asian/American: Historical Crossings of a Racial Frontier,0.8967044894689358
+"The Making of Asian America: A History, Ch. 7-9","The Making of Asian America: A History, Intro, Ch. 1-4",0.9338071195138749
+"The Making of Asian America: A History, Intro, Ch. 1-4","The Making of Asian America: A History, Ch. 7-9",0.9338071195138747
+Johnny Mnemonic,Hungry Ricky Daddy,0.723146862692449
+Surface Relations: Queer Forms of Asian American Inscrutability,Surface Relations: Queer Forms of Asian American Inscrutability,0.8653687568155662
+Hungry Ricky Daddy,Johnny Mnemonic,0.723146862692449
+"Afterwards and Other Non-Endings: Palestine, Afghanistan, and the Afterlives of War","The Right to Maim: Debility, Capacity, Disability",0.8165247860328398
+"Heterogeneity, Hybridity, Multiplicity: Marking Asian American Differences",Race and Resistance: Literature and Politics in Asian America,0.9245674310661552
+Generation Rising: A New Politics of Southeast Asian American Activism,Contemporary Asian America: A Multidisciplinary Reader,0.9204887587340255
+Asian Americans: The Movement and the Moment,Contemporary Asian America: A Multidisciplinary Reader,0.8836668665563937
+"The Gift of Freedom: War, Debt, and Other Refugee Passages",Generation Rising: A New Politics of Southeast Asian American Activism,0.8030753353425313
+Awake in the River,Johnny Mnemonic,0.6993688738685425
+Muslim American Protest Iconography and Revisionism: On the Gendered-Racial and Secular Aesthetics of (Neo)Liberal Dissent,Terrorist Assemblages: Homonationalism in Queer Times,0.8057977974871515
+Passing for Perfect: College Impostors and Other Model Minorities,Race and Resistance: Literature and Politics in Asian America,0.8166511917603244
+Racial Formation in the United States,"Critical Race Theory (Selected Writings by Harris, Lee, Crenshaw)",0.892844400746311
+Porcelain,Johnny Mnemonic,0.6987030468146255
+"The Right to Maim: Debility, Capacity, Disability","Afterwards and Other Non-Endings: Palestine, Afghanistan, and the Afterlives of War",0.8165247860328398
+Terrorist Assemblages: Homonationalism in Queer Times,Racial Castration: Managing Masculinity in Asian America,0.8915463044284159
+"Filipino American Psychology: A Handbook of Theory, Research, and Clinical Practice",Contemporary Asian America: A Multidisciplinary Reader,0.7864666451466208
+Rappin' With Ten Thousand Carabaos in the Dark,Awake in the River,0.6474539822880826
+Roots: An Asian American Reader,Contemporary Asian America: A Multidisciplinary Reader,0.9287520912083383
+Denationalization Reconsidered: Asian American Cultural Criticism at a Theoretical Crossroads,Race and Resistance: Literature and Politics in Asian America,0.9188639702996174
+Compulsory Zionism and Palestinian Existence: A Genealogy,"The Right to Maim: Debility, Capacity, Disability",0.7852737252029164
+Race and Resistance: Literature and Politics in Asian America,"Heterogeneity, Hybridity, Multiplicity: Marking Asian American Differences",0.9245674310661554
+Surface Relations: Queer Forms of Asian American Inscrutability,Race and Resistance: Literature and Politics in Asian America,0.893547934490709
+American Polygeny and Craniometry: The Origins of the American School of Anthropology,Asian/American: Historical Crossings of a Racial Frontier,0.799952204630153

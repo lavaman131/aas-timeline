@@ -26,16 +26,20 @@ def get_args() -> argparse.Namespace:
 
 def main() -> None:
     args = get_args()
-    data_path = Path(args.data)
+    data_path = Path(args.data_path)
     output_path = Path(args.output_path)
 
     with open(data_path, "r") as f:
         items = json.load(f)
 
-    embeddings = np.zeros((len(items), 3))
+    truncate_dim = 1024
+
+    embedding_col_name = "embedding" if truncate_dim != 3 else "embedding_dim3"
+
+    embeddings = np.zeros((len(items), truncate_dim))
 
     for i, item in enumerate(items):
-        embeddings[i] = np.array(item["embedding_pca"])
+        embeddings[i] = np.array(item[embedding_col_name])
 
     corr = np.corrcoef(embeddings)
     corr[np.diag_indices_from(corr)] = 0

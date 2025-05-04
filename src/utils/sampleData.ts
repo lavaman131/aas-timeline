@@ -10,7 +10,7 @@ export interface TextItem {
     type: "novel" | "article" | "poem" | "short story";
     description: string;
     embedding: number[];
-    embedding_pca: number[];
+    embedding_dim3: number[];
   }
   
   // Load data from JSON file and assert its type

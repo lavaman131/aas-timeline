@@ -4,12 +4,11 @@ from pathlib import Path
 from tqdm.auto import tqdm
 import torch
 from transformers import AutoTokenizer, AutoModel
+import torch.nn.functional as F
 import re
 import numpy as np
 import json
-import numpy.linalg as LA
 import pymupdf
-from sklearn.decomposition import PCA
 from natsort import natsorted
 
 
@@ -21,7 +20,7 @@ class TextItem(TypedDict):
     type: str
     description: str
     embedding: List[float]
-    embedding_pca: List[float]
+    embedding_dim3: List[float]
 
 
 def get_args() -> argparse.Namespace:
@@ -110,6 +109,8 @@ def main() -> None:
             attn_mask.sum(), min=1e-9
         )
 
+        embeddings = F.normalize(embeddings, p=2, dim=-1)
+
         embeddings = embeddings.cpu().numpy()
 
         all_embeddings[idx] = embeddings
@@ -122,25 +123,9 @@ def main() -> None:
             "type": metadata["type"],
             "description": metadata["description"],
             "embedding": embeddings.tolist(),
-            "embedding_pca": [],
+            "embedding_dim3": embeddings[:3].tolist(),
         }
         items.append(item)
-
-    pca = PCA(n_components=3)
-
-    mean = np.mean(all_embeddings, axis=0)
-    std = np.std(all_embeddings, axis=0)
-
-    all_embeddings = (all_embeddings - mean) / (std + 1e-6)
-
-    all_embeddings = pca.fit_transform(all_embeddings)
-
-    norm = LA.norm(all_embeddings, axis=-1, keepdims=True)
-
-    all_embeddings = all_embeddings / (norm + 1e-6)
-
-    for idx, item in enumerate(items):
-        item["embedding_pca"] = all_embeddings[idx].tolist()
 
     with open(output_path, "w") as f:
         json.dump(items, f)

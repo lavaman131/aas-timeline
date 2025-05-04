@@ -28,7 +28,7 @@ This project is a proof-of-concept digital humanities project exploring relation
     Ensure you have Python 3.10 installed (as specified in [.python-version](.python-version)).
     ```bash
     # Install base dependencies + build dependencies
-    uv sync --extra build 
+    uv sync --extra build
     # Optional: install compile dependencies to enable flash-attn support (if supported)
     uv sync --extra build --extra compile
     ```
