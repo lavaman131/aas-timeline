@@ -1,6 +1,6 @@
 # Asian American Studies Timeline
 
-This project is a proof-of-concept digital humanities project exploring relationships between embeddings of Asian American Studies texts in a 3D vector space. It uses text embeddings generated from scholarly articles, poems, and short stories, reduces their dimensionality using PCA, and visualizes them using Plotly.js within an Astro/React frontend.
+This project is a proof-of-concept digital humanities project exploring relationships between embeddings of Asian American Studies texts in a 3D vector space. It uses text embeddings generated from scholarly articles, poems, and short stories, reduces their dimensionality using Matryoshka Embedding models, and visualizes them using Plotly.js within an Astro/React frontend.
 
 ## Features
 
