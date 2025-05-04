@@ -34,7 +34,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--output_path",
         type=str,
-        default="res.json",
+        default="./src/data/res.json",
         help="Path to the output json file (including .json extension).",
     )
     return parser.parse_args()

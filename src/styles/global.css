@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+.stats-html-content table tbody tr {
+    @apply bg-gray-800 border-b border-gray-700 transition-colors duration-150 ease-in-out;
+  }
+  
+  /* Apply hover effect */
+  .stats-html-content table tbody tr:hover {
+    @apply bg-gray-700/80;
+  }
+  
+  /* Optional: Zebra striping (adjust colors as needed) */
+  .stats-html-content table tbody tr:nth-child(even) {
+     @apply bg-gray-800/60;
+  }
+  .stats-html-content table tbody tr:nth-child(even):hover {
+     @apply bg-gray-700/70; /* Slightly different hover for even rows if desired */
+  }
+  
+  /* Add padding to table header and data cells */
+  .stats-html-content table th,
+  .stats-html-content table td {
+    @apply p-2; /* Example: Adjust padding values (e.g., px-6 py-3) as needed */
+  }

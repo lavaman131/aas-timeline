@@ -26,7 +26,7 @@ const FilterControls = ({ onFilterChange }: FilterControlsProps) => {
   };
 
   return (
-    <div className="absolute top-28 left-4 bg-black/70 p-4 rounded-md text-white z-10 max-w-xs backdrop-blur-md border border-purple-500/30 shadow-lg">
+    <div className="bg-black/70 p-4 rounded-md text-white z-10 max-w-xs backdrop-blur-md border border-purple-500/30 shadow-lg">
       <h3 className="text-lg font-semibold mb-3 bg-gradient-to-r from-purple-200 to-indigo-300 bg-clip-text text-transparent">Filters</h3>
       
       <div className="mb-4">
@@ -38,8 +38,8 @@ const FilterControls = ({ onFilterChange }: FilterControlsProps) => {
               onClick={() => handleTypeChange(type)}
               className={`px-2 py-1 text-xs rounded-full transition-colors ${
                 selectedTypes.includes(type)
-                  ? "bg-purple-600 text-white border border-purple-400/50 shadow-md"
-                  : "bg-gray-800 text-gray-300 border border-gray-700"
+                  ? "hover:bg-purple-400 bg-purple-600 text-white border border-purple-400/50 shadow-md"
+                  : "hover:bg-gray-600 bg-gray-800 text-gray-300 border border-gray-700"
               }`}
             >
               {type}
