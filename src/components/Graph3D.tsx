@@ -30,7 +30,7 @@ const Graph3D: React.FC<Graph3DProps> = ({ data, onSelectNode, filters }) => {
     if (filteredData.length === 0) {
       return [];
     }
-    const embeddings = filteredData.map((item) => item.embedding);
+    const embeddings = filteredData.map((item) => item.embedding_pca);
     return embeddings;
   }, [filteredData]);
 

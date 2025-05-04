@@ -1,9 +1,8 @@
-from typing import List, Dict, TypedDict, Tuple
+from typing import List, TypedDict
 import argparse
 from pathlib import Path
 from tqdm.auto import tqdm
 import torch
-import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModel
 import re
 import numpy as np
@@ -22,6 +21,7 @@ class TextItem(TypedDict):
     type: str
     description: str
     embedding: List[float]
+    embedding_pca: List[float]
 
 
 def get_args() -> argparse.Namespace:
@@ -121,7 +121,8 @@ def main() -> None:
             "year": metadata["year"],
             "type": metadata["type"],
             "description": metadata["description"],
-            "embedding": [],
+            "embedding": embeddings.tolist(),
+            "embedding_pca": [],
         }
         items.append(item)
 
@@ -139,7 +140,7 @@ def main() -> None:
     all_embeddings = all_embeddings / (norm + 1e-6)
 
     for idx, item in enumerate(items):
-        item["embedding"] = all_embeddings[idx].tolist()
+        item["embedding_pca"] = all_embeddings[idx].tolist()
 
     with open(output_path, "w") as f:
         json.dump(items, f)
